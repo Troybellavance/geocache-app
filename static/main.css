@@ -1,0 +1,68 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background-color: #b8cccc;
+  color: #171919;
+  overflow:hidden;
+  text-align: center;
+}
+
+.container h1 {
+  font-family: Arial, sans-serif;
+  font-size: 35px;
+  color: #171919
+}
+
+.container form {
+  margin: 35px;
+}
+
+.container input {
+width: 200px;
+height: 30px;
+font-size: 13px;
+margin: 6px;
+padding: 12px;
+transition: all 0.2s ease-in-out;
+}
+
+.container button {
+  width:90px;
+  height: 30px;
+  background-color: white;
+  margin: 3px;
+}
+
+.container table{
+  display: inline-block;
+}
+
+.container table {
+  width:550px;
+  margin:auto;
+  font-size: 12px;
+  border:2px solid
+  border-collapse:collapse;
+}
+
+.container p {
+  margin: 100px;
+}
+
+.message {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #ff9999
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Tusky Data App</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+      <div class="container">
+        <h1>Geocaching</h1>
+        <h3>Upload your locations in a csv format with the full address contained within a column labeled address or Address.</h3>
+          <form action="{{url_for('success')}}" method="POST" enctype="multipart/form-data">
+            <input type="file" accept=".csv" name="csvfile" />
+            <button type="submit"> Submit </button>
+          </form>
+        <div class="table">
+          {{text|safe}}
+          {% include btn ignore missing %}
+        </div>
+      </div>
+    </body>
+</html>
