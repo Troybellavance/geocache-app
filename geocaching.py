@@ -8,11 +8,11 @@ import datetime
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def index():
     return render_template("index.html")
 
+ 
 @app.route("/success", methods=['POST'])
 def success():
     global csvfile
@@ -42,6 +42,7 @@ def success():
         df.to_csv(csvfile, index=None)
         return render_template("index.html", text=df.to_html(), btn="download.html", btn1 = "webmap.html", webmap="webmap.html")
 
+       
 @app.route("/download")
 def download():
     return send_file(csvfile, attachment_filename="yourfile.csv", as_attachment=True)
