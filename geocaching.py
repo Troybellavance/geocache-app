@@ -3,7 +3,7 @@ from geopy.geocoders import Nominatim
 import pandas
 import datetime
 
-"""A simple webapp that allows a user to submit a .csv file and obtain the geospatial
+ """A simple webapp that allows a user to submit a .csv file and obtain the geospatial
  coordinates of the addresses within."""
 
 app = Flask(__name__)
@@ -16,8 +16,6 @@ def index():
 @app.route("/success", methods=['POST'])
 def success():
     global csvfile
-    global geodata_df
-    global outgoingfile
     #Function checks if the user submitted the correct type of file and turns it into a
     #pandas dataframe before geocoding and saving as a trimmed, time-stamped file for the user.
     if request.method=='POST':
@@ -49,7 +47,7 @@ def download():
 
 
 def geocode(df):
-    """Function checks dataframe generated """
+    #Function checks dataframe generated and geocodes coordinates, logitutde and latitude from the address column.
     columns = [item.lower() for item in df.columns]
     nom=Nominatim(scheme="http")
     if "address" not in columns:
